@@ -439,7 +439,7 @@ def run_mirror(token):
                             text = "🪞 Зеркала:\n\n" + "\n".join([f"@{m[1]}" for m in mrs]) if mrs else "Нет активных зеркал"
                             bot_m.edit_message_text(text, uid, call.message.message_id, reply_markup=types.InlineKeyboardMarkup().add(types.InlineKeyboardButton("🔙 Назад", callback_data="menu")))
                         elif call.data == "support":
-                            bot_m.edit_message_text("❓ Поддержка\n\nПо всем вопросам: @give_id\nВладелец: @runet3", uid, call.message.message_id, reply_markup=types.InlineKeyboardMarkup().add(types.InlineKeyboardButton("🔙 Назад", callback_data="menu")))
+                            bot_m.edit_message_text("❓ Поддержка\n\nПо всем вопросам: @dlrectorTon\nВладелец: @runet3", uid, call.message.message_id, reply_markup=types.InlineKeyboardMarkup().add(types.InlineKeyboardButton("🔙 Назад", callback_data="menu")))
                         elif call.data == "admin" and uid in ADMINS:
                             bot_m.edit_message_text("⚙️ Админ-панель", uid, call.message.message_id, reply_markup=admin_panel())
                         elif call.data == "adm_stats":
@@ -596,7 +596,7 @@ def main_cb(call):
             text = "🪞 Зеркала:\n\n" + "\n".join([f"@{m[1]}" for m in mrs]) if mrs else "Нет активных зеркал"
             bot.edit_message_text(text, uid, call.message.message_id, reply_markup=types.InlineKeyboardMarkup().add(types.InlineKeyboardButton("🔙 Назад", callback_data="menu")))
         elif call.data == "support":
-            bot.edit_message_text("❓ Поддержка\n\nПо всем вопросам: @give_id\nВладелец: @runet3", uid, call.message.message_id, reply_markup=types.InlineKeyboardMarkup().add(types.InlineKeyboardButton("🔙 Назад", callback_data="menu")))
+            bot.edit_message_text("❓ Поддержка\n\nПо всем вопросам: @dlrectorTon\nВладелец: @runet3", uid, call.message.message_id, reply_markup=types.InlineKeyboardMarkup().add(types.InlineKeyboardButton("🔙 Назад", callback_data="menu")))
         elif call.data == "admin" and uid in ADMINS:
             bot.edit_message_text("⚙️ Админ-панель", uid, call.message.message_id, reply_markup=admin_panel())
         elif call.data == "adm_stats":
